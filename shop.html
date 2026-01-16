@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - WoodCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" style="display:flex; align-items:center; gap:5px;">
+                <i class="fa-solid fa-tree"></i> <span>WoodCraft</span>
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="icons">
+            <a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <h1>Shop</h1>
+        <p>Home > Shop</p>
+    </section>
+
+    <div class="filter-bar">
+        <div class="filter-info">
+            <i class="fa-solid fa-sliders"></i>
+            <span>Filter</span>
+            <span class="divider">|</span>
+            <span>Showing 1–8 of 32 results</span>
+        </div>
+    </div>
+
+    <section class="products">
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <div class="card-image">
+                    <span class="discount">-30%</span>
+                    <a href="product.html?id=1"><img src="images/products/chair-1.jpg" alt="Teak Chair"></a>
+                    <div class="overlay">
+                        <button class="add-to-cart" data-id="1" data-name="Teak Chair" data-price="2500000" data-image="images/products/chair-1.jpg">Add to cart</button>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <h3>Teak Chair</h3>
+                    <div class="price">Rp 2.500.000</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image">
+                    <a href="product.html?id=2"><img src="images/products/bowl-set.jpg" alt="Bowl"></a>
+                    <div class="overlay">
+                        <button class="add-to-cart" data-id="2" data-name="Wooden Bowl Set" data-price="150000" data-image="images/products/bowl-set.jpg">Add to cart</button>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <h3>Wooden Bowl Set</h3>
+                    <div class="price">Rp 150.000</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image">
+                    <span class="new">New</span>
+                    <a href="product.html?id=3"><img src="images/products/table.jpg" alt="Table"></a>
+                    <div class="overlay">
+                        <button class="add-to-cart" data-id="3" data-name="Rustic Table" data-price="7000000" data-image="images/products/table.jpg">Add to cart</button>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <h3>Rustic Table</h3>
+                    <div class="price">Rp 7.000.000</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image">
+                    <a href="product.html?id=4"><img src="images/products/lamp.jpg" alt="Lamp"></a>
+                    <div class="overlay">
+                        <button class="add-to-cart" data-id="4" data-name="Vintage Lamp" data-price="500000" data-image="images/products/lamp.jpg">Add to cart</button>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <h3>Vintage Lamp</h3>
+                    <div class="price">Rp 500.000</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image">
+                    <a href="product.html?id=1"><img src="images/products/chair-1.jpg" alt="Teak Chair"></a>
+                    <div class="overlay">
+                        <button class="add-to-cart" data-id="1" data-name="Teak Chair" data-price="2500000" data-image="images/products/chair-1.jpg">Add to cart</button>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <h3>Teak Chair (Set 2)</h3>
+                    <div class="price">Rp 2.500.000</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image">
+                    <a href="product.html?id=2"><img src="images/products/bowl-set.jpg" alt="Bowl"></a>
+                    <div class="overlay">
+                        <button class="add-to-cart" data-id="2" data-name="Wooden Bowl Set" data-price="150000" data-image="images/products/bowl-set.jpg">Add to cart</button>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <h3>Wooden Bowl Set (Large)</h3>
+                    <div class="price">Rp 150.000</div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="pagination">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>Next</span>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-bottom"><p>2026 WoodCraft. All rights reserved</p></div>
+    </footer>
+    <div class="cart-overlay"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header"><h3>Shopping Cart</h3><span class="close-cart"><i class="fa-solid fa-xmark"></i></span></div>
+        <div class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="total"><span>Subtotal:</span><span class="total-price">Rp 0</span></div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+<a href="https://wa.me/7669948561?text=Hello!%20I%20am%20interested%20in%20your%20wooden%20products." class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</html>

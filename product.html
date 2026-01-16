@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - WoodCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" style="display:flex; align-items:center; gap:5px;">
+                <i class="fa-solid fa-tree"></i> <span>WoodCraft</span>
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#">Shop</a>
+        </nav>
+        <div class="icons">
+            <a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <p>Home > Shop > <span id="bread-name">Product Name</span></p>
+    </div>
+
+    <section class="single-product">
+        <div class="product-image-section">
+            <img src="" alt="" id="main-img">
+        </div>
+
+        <div class="product-info-section">
+            <h1 id="product-name">Loading...</h1>
+            <h3 id="product-price">Rp 0</h3>
+            
+            <div class="product-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <span>(Customer Reviews)</span>
+            </div>
+
+            <p class="product-description" id="product-desc">
+                Loading description...
+            </p>
+
+            <div class="product-actions">
+                <button class="add-to-cart-btn" id="add-btn">Add To Cart</button>
+            </div>
+
+            <div class="meta-info">
+                <p>SKU: <span id="sku">SS001</span></p>
+                <p>Category: <span id="category">Furniture</span></p>
+            </div>
+        </div>
+    </section>
+
+    <div class="cart-overlay"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <span class="close-cart"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="total">
+                <span>Subtotal:</span>
+                <span class="total-price">Rp 0</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+<a href="https://wa.me/7669948561?text=Hello!%20I%20am%20interested%20in%20your%20wooden%20products." class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</html>

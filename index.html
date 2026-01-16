@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoodCraft - Handcrafted Wooden Goods</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-tree"></i> <span>WoodCraft</span>
+        </div>
+       <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</nav>
+        <div class="icons">
+            <a href="#"><i class="fa-regular fa-user"></i></a>
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+            <a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="menu-btn"><i class="fa-solid fa-bars"></i></div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-image-container">
+             <img src="images/hero/hero-bg.jpg" alt="Hero Background">
+        </div>
+        <div class="hero-content">
+            <span>New Arrival</span>
+            <h1>Discover Our <br> Wooden Collection</h1>
+            <p>Experience the warmth of nature with our handcrafted premium wooden artifacts, designed to elevate your living space.</p>
+            <a href="#" class="btn">BUY NOW</a>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="section-title">
+            <h2>Browse The Range</h2>
+            <p>Authentic craftsmanship for every corner of your home.</p>
+        </div>
+        <div class="category-container">
+            <div class="category-card">
+                <img src="images/categories/dining.jpg" alt="Dining Decor">
+                <h3>Dining</h3>
+            </div>
+            <div class="category-card">
+                <img src="images/categories/living.jpg" alt="Living Room">
+                <h3>Living</h3>
+            </div>
+            <div class="category-card">
+                <img src="images/categories/bedroom.jpg" alt="Bedroom">
+                <h3>Bedroom</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <h2 class="title">Our Products</h2>
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <div class="card-image">
+                    <span class="discount">-30%</span>
+                    <a href="product.html?id=1">
+                        <img src="images/products/chair-1.jpg" alt="Teak Chair">
+                    </a>
+                    <div class="overlay">
+                        <button class="add-to-cart" 
+                            data-id="1" 
+                            data-name="Teak Chair" 
+                            data-price="2500000" 
+                            data-image="images/products/chair-1.jpg">
+                            Add to cart
+                        </button>
+                        
+                    </div>
+                </div>
+                <div class="card-details">
+                    <h3>Teak Chair</h3>
+                    <p>Hand-carved minimal chair</p>
+                    <div class="price">Rp 2.500.000 <span class="old-price">Rp 3.500.000</span></div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image">
+                    <a href="product.html?id=2">
+                        <img src="images/products/bowl-set.jpg" alt="Wooden Bowl Set">
+                    </a>
+                    <div class="overlay">
+                        <button class="add-to-cart" 
+                            data-id="2" 
+                            data-name="Wooden Bowl Set" 
+                            data-price="150000" 
+                            data-image="images/products/bowl-set.jpg">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <h3>Wooden Bowl Set</h3>
+                    <p>Acacia wood serving bowls</p>
+                    <div class="price">Rp 150.000</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image">
+                    <span class="new">New</span>
+                    <a href="product.html?id=3">
+                        <img src="images/products/table.jpg" alt="Rustic Table">
+                    </a>
+                    <div class="overlay">
+                        <button class="add-to-cart" 
+                            data-id="3" 
+                            data-name="Rustic Table" 
+                            data-price="7000000" 
+                            data-image="images/products/table.jpg">
+                            Add to cart
+                        </button>
+                        
+                    </div>
+                </div>
+                <div class="card-details">
+                    <h3>Rustic Table</h3>
+                    <p>Reclaimed wood coffee table</p>
+                    <div class="price">Rp 7.000.000</div>
+                </div>
+            </div>
+
+             <div class="product-card">
+                <div class="card-image">
+                    <a href="product.html?id=4">
+                        <img src="images/products/lamp.jpg" alt="Vintage Lamp">
+                    </a>
+                    <div class="overlay">
+                        <button class="add-to-cart" 
+                            data-id="4" 
+                            data-name="Vintage Lamp" 
+                            data-price="500000" 
+                            data-image="images/products/lamp.jpg">
+                            Add to cart
+                        </button>
+                      
+                    </div>
+                </div>
+                <div class="card-details">
+                    <h3>Vintage Lamp</h3>
+                    <p>Wooden base night lamp</p>
+                    <div class="price">Rp 500.000</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="show-more-container">
+            <button class="btn-outline">Show More</button>
+        </div>
+    </section>
+
+    <section class="inspiration">
+        <div class="insp-content">
+            <h2>50+ Beautiful rooms inspiration</h2>
+            <p>Our designer has already created a lot of beautiful prototypes of rooms that inspire you.</p>
+            <button class="btn">Explore More</button>
+        </div>
+        <div class="insp-slider">
+            <div class="slide active">
+                <img src="images/rooms/room-1.jpg" alt="Room 1">
+                <div class="slide-content">
+                    <span>01 — Bed Room</span>
+                    <h3>Inner Peace</h3>
+                </div>
+            </div>
+            <div class="slide next">
+                <img src="images/rooms/room-2.jpg" alt="Room 2">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>WoodCraft.</h3>
+                <p>400 University Drive Suite 200 Coral Gables,<br>FL 33134 USA</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Payment Options</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <form>
+                    <input type="email" placeholder="Enter Your Email Address">
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2026 WoodCraft. All rights reserved</p>
+        </div>
+    </footer>
+
+    <div class="cart-overlay"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <span class="close-cart"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+        <div class="cart-items">
+            <p class="empty-msg">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total">
+                <span>Subtotal:</span>
+                <span class="total-price">Rp 0</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+<a href="https://wa.me/7669948561?text=Hello!%20I%20am%20interested%20in%20your%20wooden%20products." class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</html>

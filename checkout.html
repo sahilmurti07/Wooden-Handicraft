@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - WoodCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="checkout-header">
+        <div class="logo">
+            <h2>WoodCraft Checkout</h2>
+        </div>
+        <a href="index.html">Return to Shop</a>
+    </header>
+
+    <div class="checkout-container">
+        <div class="billing-details">
+            <h2>Billing Details</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" required>
+                </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" placeholder="Street Address" required>
+                </div>
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" required>
+                </div>
+                <button type="submit" class="place-order-btn">Place Order</button>
+            </form>
+        </div>
+
+        <div class="order-summary">
+            <h2>Your Order</h2>
+            <div id="checkout-items">
+                </div>
+            
+            <div class="order-total">
+                <span>Total</span>
+                <span id="final-total">Rp 0</span>
+            </div>
+            
+            <div class="payment-method">
+                <p><strong>Payment Method:</strong></p>
+                <p style="color: #666; margin-top: 5px;">Cash On Delivery (COD)</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- CHECKOUT LOGIC ---
+        
+        // 1. Get Cart Data from Memory
+        const cart = JSON.parse(localStorage.getItem('CART')) || [];
+        const checkoutItemsContainer = document.getElementById('checkout-items');
+        const finalTotalElement = document.getElementById('final-total');
+        const checkoutForm = document.getElementById('checkout-form');
+
+        // 2. Check if Cart is Empty
+        if(cart.length === 0) {
+            alert("Your cart is empty! Redirecting to shop...");
+            window.location.href = 'index.html';
+        } else {
+            renderCheckout();
+        }
+
+        // 3. Render Items & Calculate Total
+        function renderCheckout() {
+            let total = 0;
+            checkoutItemsContainer.innerHTML = ''; // Clear loading text
+
+            cart.forEach(item => {
+                // MATH FIX: Multiply Price by Quantity
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+
+                // Add HTML for this item
+                checkoutItemsContainer.innerHTML += `
+                    <div class="summary-item">
+                        <div style="display:flex; flex-direction:column;">
+                            <span style="font-weight:500;">${item.name}</span>
+                            <span style="font-size:12px; color:#888;">Qty: ${item.quantity} x Rp ${item.price.toLocaleString('id-ID')}</span>
+                        </div>
+                        <span style="font-weight:600;">Rp ${itemTotal.toLocaleString('id-ID')}</span>
+                    </div>
+                `;
+            });
+
+            // Update Final Total Text
+            finalTotalElement.innerText = "Rp " + total.toLocaleString('id-ID');
+        }
+
+        // 4. Handle "Place Order" Click
+        checkoutForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Stop page reload
+            
+            // In a real app, you would send data to a server here.
+            // For now, we simulate success:
+            
+            const customerName = document.querySelector('input[type="text"]').value;
+            
+            alert(`Thank you ${customerName}! Your order of ${finalTotalElement.innerText} has been placed.`);
+            
+            // Clear the cart memory
+            localStorage.removeItem('CART');
+            
+            // Go back to home
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+<a href="https://wa.me/7669948561?text=Hello!%20I%20am%20interested%20in%20your%20wooden%20products." class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</html>
